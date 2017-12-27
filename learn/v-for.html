@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+    <h5>数组示例1：of</h5>
+    <ul>
+      <li v-for="item of items">
+        {{ item.message }}
+      </li>
+    </ul>
+    
+    <h5>数组示例2：</h5>
+    <ul>
+      <li v-for="(item, index) in items">
+        {{ index }} - {{ item.message }}
+      </li>
+    </ul>
+
+    <h5>对象示例3：</h5>
+    <ul>
+      <li v-for="(value, key, index) in object">
+          {{ index }}. {{ key }}: {{ value }}
+      </li>
+    </ul>
+
+    <h5>number示例4：</h5>
+    <div>
+      <span v-for="n in 10">{{ n }} </span>
+    </div>
+
+    <h5>string示例5：</h5>
+    <div>
+      <span v-for="n in msg">{{ n }} </span>
+    </div>
+  </div>
+<script src="vue.js"></script>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ],
+    object: {
+      firstName: 'John',
+      lastName: 'Doe',
+      age: 30
+    },
+    msg: 'abc'
+  }
+})
+</script>
+</body>
+</html>

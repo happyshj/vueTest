@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+    <h5>单个元素</h5>
+    差值：{{ message }}
+    <br>
+    <span v-once>v-once： {{ message }} </span>
+
+    <h5>有子元素</h5>
+    差值：{{ message }}
+    <br>
+    <div v-once>
+      <span>comment</span>
+      <span>{{message}}</span>
+    </div>
+  </div>
+<script src="vue.js"></script>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+</script>
+</body>
+</html>

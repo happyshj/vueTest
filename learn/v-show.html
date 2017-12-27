@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+    <h5>示例1：display切换</h5>
+    v-show: <span v-show="ok">Hello</span>
+    <br>
+    v-if：<span v-if="ok">Hello</span>
+
+    <h5>示例2：v-if可以切换多个元素</h5>
+    <template v-if="ok">
+      <h6>Title</h6>
+      <p>Paragraph 1</p>
+      <p>Paragraph 2</p>
+    </template>
+    <template v-show="ok">
+      <h6>Title</h6>
+      <p>Paragraph 1</p>
+      <p>Paragraph 2</p>
+    </template>
+  </div>
+<script src="vue.js"></script>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    ok: false
+  }
+})
+</script>
+</body>
+</html>
