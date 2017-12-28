@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h5>不添加v-cloak</h5>  
+    <div>
+      {{ msg }}
+    </div>
+    
+    <h5>添加v-cloak</h5>
+    <div v-cloak>
+      {{ msg }}
+    </div>
+  </div>
+<script src="vue.js"></script>
+<script>
+setTimeout(() => {
+  new Vue({
+    el: '#app',
+    data: {
+      msg: 'hello'
+    }
+  })
+},2000)    
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     msg: 'A'
+//   }
+// })
+</script>
+</body>
+</html>
